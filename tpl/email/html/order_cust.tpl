@@ -229,7 +229,7 @@
                     [{assign var="voucherseries" value=$voucher->getSerie()}]
                     <tr valign="top" bgcolor="#ebebeb">
                         <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{$voucher->oxvouchers__oxvouchernr->value}]</td>
-                        <td align="right" class="odd text-right">[{$voucherseries->oxvoucherseries__oxdiscount->value}] [{if $voucherseries->oxvoucherseries__oxdiscounttype->value == "absolute"}][{$currency->sign}][{else}]%[{/if}]</td>
+                        <td align="right" class="odd text-right">[{$voucher->oxvouchers__oxdiscount->value}] [{$currency->sign}]</td>
                     </tr>
                 [{/foreach}]
             [{/if}]
